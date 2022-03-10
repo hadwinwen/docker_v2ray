@@ -3,9 +3,10 @@
  COPY config.json /etc/v2ray/config.json
  RUN set -ex \
  	 	 && apk add --no-cache caddy wget \
-		 && mkdir -p /usr/share/caddy /etc/caddy/ \
-		 && echo "caddy page"  > /usr/share/caddy/index.html
+		 && mkdir -p /usr/share/caddy /etc/caddy/
  COPY Caddyfile /etc/caddy/Caddyfile
  COPY service.sh /service.sh
+ COPY index.html /usr/share/caddy/index.html
+ COPY style.css /usr/share/caddy/style.css
  RUN chmod u+x /service.sh
  CMD /service.sh
