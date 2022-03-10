@@ -1,0 +1,18 @@
+{
+	admin off
+	log {
+	    output discard
+	    level ERROR
+	}
+}
+:80 {
+	root * /usr/share/caddy
+	file_server
+
+	@v2ray_ws {
+		path /ws
+		header Connection Upgrade
+		header Upgrade websocket
+	}
+	reverse_proxy @v2ray_ws localhost:10808
+}
