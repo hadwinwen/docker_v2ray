@@ -2,7 +2,7 @@ name: v2ray
 
 on:
   push:
-    branches: [ * ]
+    branches: [ '*' ]
 
 jobs:
   build:
