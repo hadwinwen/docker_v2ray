@@ -2,14 +2,11 @@ name: v2ray
 
 on:
   push:
-    branches: [ main ]
+    branches: [ * ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       -
         name: Checkout 
@@ -30,4 +27,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/v2ray:ws
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/v2ray:$GITHUB_REF_NAME
