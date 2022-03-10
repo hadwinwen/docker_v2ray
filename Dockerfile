@@ -6,7 +6,6 @@
 		 && mkdir -p /usr/share/caddy /etc/caddy/
  COPY Caddyfile /etc/caddy/Caddyfile
  COPY service.sh /service.sh
- COPY html/index.html /usr/share/caddy/index.html
- COPY html/style.css /usr/share/caddy/style.css
+ COPY html/* /usr/share/caddy/
  RUN chmod u+x /service.sh
  CMD /service.sh
