@@ -21,9 +21,6 @@
 						"id": "0fd36365-2d5d-45c9-a5dc-6bba190cd536"
 					}
 				]
-			},
-			"streamSettings": {
-				"network": "ws"
 			}
 		}
     ],
