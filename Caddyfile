@@ -5,7 +5,7 @@
 	    level ERROR
 	}
 }
-:80 {
+:10807 {
 	root * /usr/share/caddy
 	file_server
 
